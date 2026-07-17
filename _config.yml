@@ -14,7 +14,8 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Johnson Xie # the main title
+title: Johnson Xie 
+# the main title
 
 tagline: Personal Minimal Archive # it will display as the subtitle
 
@@ -61,7 +62,7 @@ webmaster_verifications:
   # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-95Q6EY9CE9
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -194,9 +195,9 @@ defaults:
       layout: post
       comments: true # Enable comments in posts.
       toc: true # Display TOC column in posts.
+      permalink: /post/:title/
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
-      permalink: /post/:title/
   - scope:
       path: _drafts
     values:
@@ -216,9 +217,9 @@ compress_html:
   comments: all
   endings: all
   profile: false
-  blanklines: false
+  blanklines: True
   ignore:
-    envs: [development]
+    # envs: [development]
 
 exclude:
   - "*.gem"

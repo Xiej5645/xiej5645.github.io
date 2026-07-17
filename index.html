@@ -19,95 +19,9 @@ permalink: /
   window.onload = checkWindowHeight;
   window.onresize = checkWindowHeight;
 </script>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-<style>
-  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
-
-  @keyframes bottomToTop {
-    from {
-      transform: translateY(5%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .landing-page {
-    text-align: left;
-    padding: 50px 0;
-    margin-left: 0;
-    animation: bottomToTop 1s ease-out;
-  }
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    vertical-align: middle;
-    animation: bottomToTop 1s ease-out;
-  }
-  .profile-info {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 20px;
-    animation: bottomToTop 1s ease-out;
-  }
-  .name {
-    font-size: 2.5em;
-    font-weight: bold;
-    animation: bottomToTop 1s ease-out;
-  }
-  .title {
-    font-size: 1.5em;
-    color: gray;
-    animation: bottomToTop 1s ease-out;
-  }
-  .social-links {
-    margin-top: 10px;
-    animation: bottomToTop 1s ease-out;
-  }
-  .social-links a {
-    margin: 0 10px 0 0;
-    font-size: 1.5em;
-    color: black;
-  }
-  .description {
-    margin: 20px 0;
-    font-size: 1.2em;
-    color: gray;
-    animation: bottomToTop 1s ease-out;
-  }
-  .buttons {
-    animation: bottomToTop 1s ease-out;
-  }
-  .buttons a {
-    display: inline-block;
-    margin: 10px 10px 10px 0;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    /* color: initial; */
-    font-size: 1.2em;
-    font-weight: 600;
-  }
-  .read-blog {
-    background-color: #1e90ff;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-    color: white !important;
-  }
-  .about-me {
-    background: 0 0;
-    color: #1e90ff !important;
-    border: 1px solid #1e90ff;
-  }
-  .page-title {
-    display: none;
-  }
-  footer {
-    display: none;
-  }
-</style>
+<link rel="stylesheet" href="assets/css/index.css">
 
 <div class="landing-page">
   <!--
@@ -132,7 +46,16 @@ permalink: /
     Keep Learning &amp; Every Day Is A Change To Be Better!
   </div>
   <div class="buttons">
-    <a href="{{ site.baseurl }}/blog/" class="read-blog">Read Blog</a>
+    <a href="{{ site.baseurl }}/blog/" class="read-blog hover:pointer-events-none">Read Blog</a>
     <a href="{{ site.baseurl }}/about" class="about-me">About Me</a>
+    <a href="{{ site.baseurl }}#project" class="project">Projects</a>
   </div>
+  <div class="logo" style="margin-top:10px;">
+    {% include marquee.html %}
+  </div>
+  <main>
+  <section id="project">
+  <h2>Projects</h2>
+  </section>
+  </main>
 </div>
